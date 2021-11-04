@@ -15,6 +15,6 @@ public class HomeActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();//Oculta barra superior
 
-        
+
     }
 }
