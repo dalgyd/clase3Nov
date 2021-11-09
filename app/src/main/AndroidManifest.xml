@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clase3Nov">
         <activity
-            android:name=".HomeActivity"
-            android:label="Home"
+            android:name=".Productos"
             android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="Home" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
