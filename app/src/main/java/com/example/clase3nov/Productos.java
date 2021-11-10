@@ -1,6 +1,7 @@
 package com.example.clase3nov;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 

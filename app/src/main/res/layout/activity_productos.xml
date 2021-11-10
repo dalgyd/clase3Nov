@@ -17,7 +17,7 @@
         android:textSize="30dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ListRecyclerView"
+        android:id="@+id/listRecyclerView"
         android:layout_width="338dp"
         android:layout_height="291dp"
         android:layout_below="@id/textView"
