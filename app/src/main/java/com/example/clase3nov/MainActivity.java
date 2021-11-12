@@ -20,7 +20,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<ListElement> elements; // NUEVO
     //la declaramos de forma global
     Button loginbtn;
 
@@ -28,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        init(); //Lo convertimos en metodo
 
         getSupportActionBar().hide();
 
@@ -77,19 +74,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void init () {
-        elements = new ArrayList<>();
-        elements.add(new ListElement("#", "", "", ""));
-        elements.add(new ListElement("#", "", "", ""));
-        elements.add(new ListElement("#", "", "", ""));
-        elements.add(new ListElement("#", "", "", ""));
-
-        ListAdapter listAdapter = new ListAdapter(elements, this);
-        RecyclerView recyclerView = findViewById(R.id.listRecyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(listAdapter);
-
-    }
 
 }
