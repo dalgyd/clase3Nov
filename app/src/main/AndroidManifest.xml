@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clase3Nov">
         <activity
+            android:name=".SnackBar"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
