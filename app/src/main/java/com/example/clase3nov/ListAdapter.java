@@ -21,14 +21,16 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     public ListAdapter(List<ListElement> itemList, Context context){
         this.mData = itemList;
-        //
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
 
     }
 
+
+
     @Override
     public int getItemCount(){
+
         return mData.size();
     }
 
@@ -46,19 +48,22 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     // Segun la documentacion es buena practica representar ls variables finales en mayuscula
 
     public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int POSITION){
-        holder.bindData(mData.get(position));
+        holder.bindData(mData.get(POSITION));
     }
 
-    public void setItems(List<ListElement> items){
+    public void setItems(List<ListElement> items)
+    {
         mData = items;
     }
 
-    public class ViewHolder extends RecyclerView{
+
+    // ViewHolder = Describe una vista de un elemento(CARD)y matadatos sobre su lugar dentro de RecyclerView
+    public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
         TextView name, country, status;
 
         ViewHolder(View itemView){
-            super(itemView);
+            super(itemView); //Super = Se refiere a una variable local en un método.
             iconImage = itemView.findViewById(R.id.iconImageView);
             name = itemView.findViewById(R.id.nameTextView);
             country = itemView.findViewById(R.id.countryView);

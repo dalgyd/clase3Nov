@@ -10,11 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clase3Nov">
         <activity
+            android:name=".SnackBar"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
             android:name=".Productos"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".HomeActivity"
             android:exported="false"
